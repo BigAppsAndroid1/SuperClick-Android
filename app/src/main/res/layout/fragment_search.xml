@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_search"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <il.co.superclick.widgets.MenuBar
+        android:id="@+id/menu_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/menu_bar_height" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:scrollbars="vertical"
+        android:backgroundTint="@color/transparent"
+        tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        tools:listitem="@layout/item_product"
+        tools:spanCount="2" />
+
+<!--    <il.co.superclick.widgets.CheckoutBar-->
+<!--        android:id="@+id/checkout_bar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/checkout_bar_height"-->
+<!--        android:visibility="gone" />-->
+
+</LinearLayout>

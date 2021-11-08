@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
+    tools:ignore="ContentDescription">
+
+    <ImageView
+        android:id="@+id/address_lookup_back_button"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@drawable/back"
+        app:tint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@id/address_lookup_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/address_lookup_search" />
+
+    <il.co.superclick.widgets.SearchWidget
+        android:id="@+id/address_lookup_search"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:hint="@string/address"
+        app:layout_constraintEnd_toStartOf="@id/address_lookup_back_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/address_lookup_line"
+        style="@style/line"
+        android:layout_marginTop="24dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/address_lookup_search"
+        tools:visibility="visible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/address_lookup_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/address_lookup_line"
+        tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_address_lookup" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="100dp">
+
+    <Button
+        android:id="@+id/dev_scroll_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="scroll to"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/dev_smooth_scroll_by"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="smooth scroll by"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/dev_layout_scroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="layout scroll"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/dev_smooth_scroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="smooth scroll"
+        tools:ignore="HardcodedText" />
+</LinearLayout>

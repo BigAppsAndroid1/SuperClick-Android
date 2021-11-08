@@ -1,0 +1,14 @@
+{
+  "id": 1,
+  "token": "A-B-C-D",
+  "name": "test user",
+  "email": "fake@mail.com",
+  "phone": "+1234567890",
+  "shopId": 1,
+  "streetName": "elm street",
+  "streetNumber": "1428",
+  "floorNumber": "1",
+  "entranceCode": "666*",
+  "apartmentNumber": "1",
+  "city": "Ohio"
+}

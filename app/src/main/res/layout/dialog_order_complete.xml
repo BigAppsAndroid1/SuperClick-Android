@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Dialog"
+    android:orientation="vertical"
+    android:padding="8dp"
+    tools:layout_height="200dp">
+
+    <ImageView
+        android:id="@+id/order_received_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/close"
+        android:contentDescription="Close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/dialog_order_received_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="6dp"
+        android:contentDescription="@null"
+        app:layout_constraintDimensionRatio="5:2"
+        app:layout_constraintStart_toStartOf="@id/dialog_order_received_title"
+        app:layout_constraintEnd_toEndOf="@id/dialog_order_received_title"
+        app:layout_constraintTop_toBottomOf="@id/order_received_close"
+        android:src="@drawable/image_happy"/>
+
+
+    <TextView
+        android:id="@+id/dialog_order_received_title"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/dialog_order_received_title"
+        android:textColor="@color/black"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialog_order_received_image"
+        app:layout_constraintBottom_toTopOf="@id/order_received_middle_text"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+#    <TextView
+        android:id="@+id/order_received_middle_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/order_received_text"
+        android:textColor="#7f000000"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintBottom_toTopOf="@id/order_complete_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialog_order_received_title"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+
+    <Button
+        android:layout_height="wrap_content"
+        android:id="@+id/order_complete_button"
+        style="@style/Button.GrayWithBlueText"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:padding="4dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/order_received_middle_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="To view the order"
+        android:text="@string/see_the_order" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

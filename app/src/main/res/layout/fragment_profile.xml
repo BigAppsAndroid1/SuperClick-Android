@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_1"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    tools:ignore="HardcodedText">
+
+    <il.co.superclick.widgets.MenuBar
+        android:id="@+id/menu_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_bar_height" />
+
+    <il.co.superclick.widgets.UserDetailsWidget
+        android:id="@+id/profile_user_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="24dp"
+        />
+
+    <Button
+        android:id="@+id/profile_submit"
+        style="@style/ButtonProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp"
+        android:text="@string/save_details" />
+
+</LinearLayout>

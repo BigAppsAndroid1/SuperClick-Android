@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:layoutDirection="rtl"
+    android:orientation="horizontal"
+    tools:ignore="HardcodedText,ContentDescription"
+    tools:parentTag="android.widget.LinearLayout">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/sub_categories_bar_recycler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layoutDirection="rtl"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/sub_categories_bar_recycler"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:stackFromEnd="true"
+        tools:background="@color/blue"
+        tools:listitem="@layout/item_sub_category" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/categories_bar_recycler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layoutDirection="rtl"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sub_categories_bar_recycler"
+        app:stackFromEnd="true"
+        tools:listitem="@layout/item_category" />
+</androidx.constraintlayout.widget.ConstraintLayout>

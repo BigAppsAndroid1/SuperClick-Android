@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Dialog"
+    tools:ignore="HardcodedText,Autofill,TextFields,ContentDescription"
+    tools:layout_height="360dp"
+    tools:layout_width="match_parent">
+
+    <ImageView
+        android:id="@+id/shop_confirm_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:scaleType="centerInside"
+        app:layout_constraintDimensionRatio="1:0.3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.9"
+        android:contentDescription="@null"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/shop_confirm_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        android:gravity="center"
+        android:lines="4"
+        android:textSize="18sp"
+        app:autoSizeMaxTextSize="18dp"
+        app:autoSizeMinTextSize="12dp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@id/shop_confirm_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shop_confirm_image"
+        android:contentDescription="@null"
+        tools:text="@tools:sample/lorem/random" />
+
+    <TextView
+        android:id="@+id/shop_confirm_button"
+        style="@style/Button"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="Entrance Button"
+        android:text="כניסה"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        app:layout_constraintBottom_toTopOf="@id/shop_confirm_cancel_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+        android:id="@+id/shop_confirm_cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="Not the right store? Try again"
+        android:text="לא החנות הנכונה? נסה שוב"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

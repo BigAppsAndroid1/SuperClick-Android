@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Dialog"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/dialog_address_not_in_radius_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/close"
+        android:contentDescription="Close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/dialog_address_not_in_radius_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="6dp"
+        android:contentDescription="@null"
+        app:layout_constraintDimensionRatio="3:2"
+        app:layout_constraintStart_toStartOf="@id/dialog_address_not_in_radius_title"
+        app:layout_constraintEnd_toEndOf="@id/dialog_address_not_in_radius_title"
+        app:layout_constraintTop_toBottomOf="@id/dialog_address_not_in_radius_close"
+        android:src="@drawable/image_sad"/>
+
+
+    <TextView
+        android:id="@+id/dialog_address_not_in_radius_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:contentDescription="Really sorry"
+        android:text="@string/we_are_sorry"
+        android:textColor="@color/colorAccent"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialog_address_not_in_radius_image"
+        app:layout_constraintBottom_toTopOf="@id/dialog_address_not_in_radius_text"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/dialog_address_not_in_radius_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:contentDescription="Our shipments have not yet arrived in your area."
+        android:text="@string/delivery_still_not_available_for_radius"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialog_address_not_in_radius_title"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/dialog_address_not_in_radius_visit_us"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/greyLight"
+        android:textSize="14sp"
+        android:contentDescription="Feel free to visit our store at: % s"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_address_not_in_radius_text"
+        tools:text="@string/visit_us_with_address" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

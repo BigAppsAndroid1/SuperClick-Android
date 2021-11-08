@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="26dp"
+    android:layout_marginBottom="8dp"
+    android:layoutDirection="rtl">
+
+    <TextView
+        android:id="@+id/tag_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_sides_border_rounded_1dp"
+        android:fontFamily="@font/heebo_light"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textAlignment="textStart"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        tools:text="@tools:sample/lorem" />
+
+</LinearLayout>

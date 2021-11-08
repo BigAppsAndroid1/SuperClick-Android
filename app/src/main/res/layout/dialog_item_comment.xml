@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Dialog"
+    android:layout_marginStart="30dp"
+    android:layout_marginEnd="30dp"
+    android:paddingStart="16dp"
+    android:paddingTop="16dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="20dp">
+
+    <EditText
+        android:id="@+id/dialog_item_comment_text"
+        style="@style/EditText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.75"
+        android:contentDescription="Write your comment here"
+        android:hint="@string/comment_hint"
+        android:inputType="textMultiLine"
+        android:lines="4"
+        android:maxLength="50"
+        app:layout_constraintBottom_toTopOf="@id/dialog_item_comment_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="Autofill,HardcodedText" />
+
+    <TextView
+        android:id="@+id/dialog_item_comment_button"
+        style="@style/Button.BlueWithBlueText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Save"
+        android:text="@string/dialog_item_comment_ok"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp"
+        android:textSize="16sp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialog_item_comment_text" />
+
+    <TextView
+        android:id="@+id/dialog_item_comment_cancel"
+        style="@style/Button.GrayWithBlueText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Cancel"
+        android:text="@string/dialog_item_comment_cancel"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp"
+        android:textSize="16sp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="@id/dialog_item_comment_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/dialog_item_comment_button" />
+</androidx.constraintlayout.widget.ConstraintLayout>

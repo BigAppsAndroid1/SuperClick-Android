@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:background="#abc">
+
+    <ImageView
+        android:id="@+id/item_category_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/category_background"
+        android:scaleType="centerCrop"
+        tools:src="@tools:sample/avatars"
+        tools:text="ירקות"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/item_category_name"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="top|center_horizontal"
+        android:lines="2"
+        android:paddingStart="1dp"
+        android:paddingEnd="1dp"
+        android:textColor="@color/white"
+        app:autoSizeMaxTextSize="15sp"
+        app:autoSizeMinTextSize="8sp"
+        app:autoSizeTextType="uniform"
+        tools:text="@tools:sample/lorem/random" />
+</LinearLayout>

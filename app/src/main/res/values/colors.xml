@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="orange">#F1A300</color>
+    <color name="greyDark">#4B4B4B</color>
+    <color name="grey">#919191</color>
+    <color name="greyLight">#A7A7A7</color>
+    <color name="greyLightTransparent">#10A7A7A7</color>
+    <color name="greyLightest">#DDDDDD</color>
+    <color name="blue">#2F6DB4</color>
+    <color name="blueLight">#57A5FF</color>
+    <color name="blueDark">#001731</color>
+    <color name="red">#F00</color>
+    <color name="colorPrimary">@color/blue</color>
+    <color name="colorPrimaryDark">@color/blueDark</color>
+    <color name="colorAccent">@color/blueLight</color>
+    <color name="background">@color/white</color>
+    <color name="text_color">@color/black</color>
+    <color name="text_color_invalid">@color/red</color>
+    <color name="categories_bar_background">@color/blueLight</color>
+    <color name="categories_bar_background_selected">@color/white</color>
+    <color name="categories_bar_text">@color/white</color>
+    <color name="menu_bar_background">@color/transparent</color>
+    <color name="title">@color/colorPrimary</color>
+    <color name="checkout_bar_background">@color/colorAccent</color>
+    <color name="alpha_white">#97ffffff</color>
+    <color name="blueStartPage">#00B1E1</color>
+    <color name="grayDark40">#404B4B4B</color>
+</resources>

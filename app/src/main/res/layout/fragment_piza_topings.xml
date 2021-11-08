@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/dialog_background"
+    android:elevation="4dp"
+    android:gravity="center"
+    android:layoutDirection="rtl"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp">
+
+
+    <TextView
+        android:id="@+id/pizza_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:autoSizeMaxTextSize="22sp"
+        android:autoSizeMinTextSize="10sp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:lines="3"
+        android:textColor="@color/colorAccent"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintDimensionRatio="500:130"
+        app:layout_constraintEnd_toStartOf="@id/dialog_toppings_close"
+        app:layout_constraintStart_toEndOf="@id/toppings_delete"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginStart="50dp"
+        tools:text="פיצה יוונית אישית מס' 1\nתוספות" />
+
+
+    <ImageView
+        android:id="@+id/dialog_toppings_close"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleX="0.7"
+        android:scaleY="0.7"
+        android:src="@drawable/close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/toppings_delete"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:src="@drawable/trash"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_base_pizza"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/pizza_toppings_list"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pizza_title"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintWidth_percent="0.6"
+        tools:src="@drawable/pizza" />
+
+
+    <ImageView
+        android:id="@+id/slice_pizza1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="@+id/iv_base_pizza"
+        app:layout_constraintTop_toTopOf="@id/iv_base_pizza"
+        app:layout_constraintWidth_percent="0.30" />
+
+    <ImageView
+        android:id="@+id/slice_pizza2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_base_pizza"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="@id/iv_base_pizza"
+        app:layout_constraintTop_toBottomOf="@+id/slice_pizza1"
+        app:layout_constraintWidth_percent="0.30" />
+
+    <ImageView
+        android:id="@+id/slice_pizza3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toRightOf="@+id/slice_pizza1"
+        app:layout_constraintTop_toTopOf="@id/iv_base_pizza"
+        app:layout_constraintWidth_percent="0.30" />
+
+    <ImageView
+        android:id="@+id/slice_pizza4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_base_pizza"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toRightOf="@+id/slice_pizza1"
+        app:layout_constraintTop_toBottomOf="@+id/slice_pizza3"
+        app:layout_constraintWidth_percent="0.30" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_chosen_toppings"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="2dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_base_pizza"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pizza_title"
+        app:layout_constraintWidth_percent="0.25"
+        tools:listitem="@layout/item_selected_pizza_topping" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pizza_toppings_list"
+        android:layout_width="0dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:fadeScrollbars="false"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarFadeDuration="0"
+        android:scrollbars="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/toppings_submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/slice_pizza4"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:listitem="@layout/item_pizza_toping" />
+
+
+    <TextView
+        android:id="@+id/toppings_submit"
+        style="@style/Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="30dp"
+        android:autoSizeMaxTextSize="20sp"
+        android:autoSizeMinTextSize="14sp"
+        android:autoSizeTextType="uniform"
+        android:paddingStart="35dp"
+        android:paddingTop="3dp"
+        android:paddingEnd="35dp"
+        android:paddingBottom="3dp"
+        android:text="@string/add_to_cart"
+        android:textSize="14sp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pizza_toppings_list"
+        tools:ignore="HardcodedText" />
+</androidx.constraintlayout.widget.ConstraintLayout>

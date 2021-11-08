@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_pay"
+    android:layoutDirection="rtl"
+    tools:context=".MainActivity"
+    tools:ignore="HardcodedText">
+
+    <il.co.superclick.widgets.MenuBar
+        android:id="@+id/menu_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_bar_height"
+        android:layout_alignParentTop="true" />
+
+    <il.co.superclick.widgets.UserDetailsWidget
+        android:id="@+id/user_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/menu_bar"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp" />
+
+    <TextView
+        android:id="@+id/order_details_policy_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_details"
+        android:layout_alignEnd="@id/user_details"
+        android:layout_toEndOf="@id/order_details_policy_checkbox"
+        android:autoSizeMaxTextSize="14sp"
+        android:autoSizeMinTextSize="10sp"
+        android:autoSizeTextType="uniform"
+        android:lines="2"
+        android:padding="4dp"
+        android:text="@string/agree_with_terms"
+        android:textSize="12sp" />
+
+    <CheckBox
+        android:id="@+id/order_details_policy_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/user_details"
+        android:layout_alignTop="@id/order_details_policy_text"
+        android:layout_alignBottom="@id/order_details_policy_text" />
+
+    <TextView
+        android:id="@+id/order_details_credit"
+        style="@style/Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/order_details_policy_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:textSize="16sp"
+        android:autoSizeMaxTextSize="20sp"
+        android:autoSizeMinTextSize="14sp"
+        android:autoSizeTextType="uniform"
+        android:elevation="0dp"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/delivery_credit"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/order_details_cash"
+        style="@style/Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/order_details_credit"
+        android:layout_alignStart="@+id/order_details_credit"
+        android:layout_alignEnd="@+id/order_details_credit"
+        android:layout_marginTop="6dp"
+        android:lines="1"
+        android:autoSizeMaxTextSize="20sp"
+        android:autoSizeMinTextSize="8sp"
+        android:autoSizeTextType="uniform"
+        android:elevation="0dp"
+        android:paddingStart="35dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="35dp"
+        android:paddingBottom="10dp"
+        android:text="@string/delivery_cash_delivery"
+        android:textSize="16sp" />
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/order_details_delivery_label"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginBottom="10dp"-->
+    <!--        android:paddingTop="2dp"-->
+    <!--        android:paddingBottom="2dp"-->
+    <!--        android:paddingStart="16dp"-->
+    <!--        android:paddingEnd="16dp"-->
+    <!--        android:text="@string/delivery_price_from_zones"-->
+    <!--        android:background="@drawable/black_stroke_rounded_corns"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:layout_centerHorizontal="true"-->
+    <!--        tools:text="@string/delivery_price"/>-->
+
+</RelativeLayout>

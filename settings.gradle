@@ -1,0 +1,2 @@
+rootProject.name='SuperClick'
+include ':app'

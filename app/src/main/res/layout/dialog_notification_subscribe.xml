@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Dialog"
+    android:background="@drawable/sale_message"
+    tools:layout_height="400dp"
+    tools:ignore="ContentDescription,HardcodedText">
+
+
+    <TextView
+        android:id="@+id/notification_subscribe_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="center"
+        android:lines="2"
+        android:contentDescription="We love our customers, and think they deserve the best!"
+        android:text="@string/notification_subscribe_title"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:autoSizeMaxTextSize="18dp"
+        app:autoSizeMinTextSize="16dp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/notification_subscribe_sub_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center"
+        android:lines="3"
+        android:contentDescription="Feel like getting updates on special benefits and promotions? Promise not to bother too much…"
+        android:text="@string/notification_text"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/notification_subscribe_label" />
+
+    <TextView
+        android:id="@+id/notification_subscribe_submit"
+        style="@style/Button"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="16dp"
+        android:padding="8dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="Yes, sure!"
+        android:text="@string/yes_of_course"
+        android:backgroundTint="@color/black"
+        android:textSize="16sp"
+        android:layout_marginEnd="30dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="@id/notification_subscribe_label"
+        app:layout_constraintTop_toBottomOf="@id/notification_subscribe_sub_label" />
+
+    <TextView
+        android:id="@+id/notification_subscribe_cancel"
+        style="@style/Button"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_transparent_with_black_border"
+        android:padding="8dp"
+        android:contentDescription="No thanks"
+        android:text="@string/no_thanks"
+        android:textColor="@color/grey"
+        android:textSize="16sp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintBottom_toBottomOf="@id/notification_subscribe_submit"
+        app:layout_constraintEnd_toEndOf="@id/notification_subscribe_label"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/notification_subscribe_submit" />
+</androidx.constraintlayout.widget.ConstraintLayout>

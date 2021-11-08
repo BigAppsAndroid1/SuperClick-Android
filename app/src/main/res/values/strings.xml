@@ -1,0 +1,226 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="app_name" translatable="false">קליק סופר אונליין</string>
+    <string name="google_maps_key" translatable="false">AIzaSyBrIwfWUqbKus21Odtc6tW3Lo_jv3a2fa8</string>
+    <string name="shop_not_found_toast" translatable="false">החנות לא נמצאה</string>
+    <string name="user_not_found_toast" translatable="false">משתמש לא קיים,\nיש להזין מס\' חנות</string>
+    <string name="sms_invalid_toast">הקוד אינו תקין</string>
+    <string name="dialog_sms_phone_title" translatable="false">משתמש קיים</string>
+    <string name="dialog_sms_phone_label" translatable="false">הקלד את מספר הנייד שלך כאן</string>
+    <string name="dialog_sms_verify_title">שלחנו לך קוד אימות לנייד\n הקלד אותו כאן:</string>
+    <string name="dialog_sms_verify_label">הזן את הקוד במסרון שקבלת</string>
+    <string name="item_product_default_submit">הוסף לסל</string>
+    <string name="item_product_done_submit">עדכן סל</string>
+    <string name="item_cart_edit_submit" translatable="false">@string/item_product_done_submit</string>
+    <string name="empty_string" translatable="false" />
+    <string name="item_cart_description">%1$s ל%2$s</string>
+    <string name="dialog_product_alert_add_success">המוצר התווסף בהצלחה</string>
+    <string name="dialog_product_alert_remove_success">המוצר הוסר בהצלחה</string>
+    <string name="dialog_product_alert_update_success">מוצר עודכן בהצלחה</string>
+    <string name="dialog_confirm_ok">אישור</string>
+    <string name="dialog_confirm_cancel">ביטול</string>
+    <string name="item_cart_delete_confirm_text">להסיר את המוצר מהרשימה?</string>
+    <string name="item_cart_delete_confirm_button">הסר</string>
+    <string name="item_cart_delete_cancel_button">בטל</string>
+    <string name="check_payment_button">מעבר לתשלום</string>
+    <string name="checkout_title">קופה</string>
+    <string name="checkout_bar_button">מעבר לקופה</string>
+    <string name="checkout_bar_label">סה\"כ\nלתשלום</string>
+    <string name="order_type_title">תשלום</string>
+    <string name="customer_support_phone" translatable="false">לרשותכם תמיד: %1$s</string>
+    <string name="days_of_week_delivery_prompt">זמני משלוחים: </string>
+    <string name="days_of_week_pickup_prompt">זמני איסוף: </string>
+    <string name="order_details_title" translatable="false">פרטי התקשרות לקוח</string>
+    <string name="delivery_credit">תשלום באשראי</string>
+    <string name="delivery_cash_delivery">תשלום לשליח</string>
+    <string name="delivery_cash_pickup">תשלום בחנות</string>
+    <string name="credit_card_title">פרטי כרטיס אשראי</string>
+    <string name="credit_card_token_submit">שלח</string>
+    <string name="credit_card_new_submit">שמור</string>
+    <string name="credit_card_submit_error_toast">שגיאה: %1$s</string>
+    <string name="sunday">ראשון</string>
+    <string name="monday">שני</string>
+    <string name="tuesday">שלישי</string>
+    <string name="wednesday">רביעי</string>
+    <string name="thursday">חמישי</string>
+    <string name="friday">שישי</string>
+    <string name="saturday">שבת</string>
+    <string-array name="months">
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+    <string name="credit_card_month_prompt">חודש</string>
+    <string name="credit_card_year_prompt">שנה</string>
+    <string name="history_title">היסטוריית הזמנות</string>
+    <string name="history_order_title">הזמנה #%1$d</string>
+    <string name="history_total_sum_label">סה\"כ\nשולם</string>
+    <string name="dialog_logout_confirm" translatable="false">התנתק</string>
+    <string name="dialog_logout_cancel">בטל</string>
+    <string name="about_title">מי אנחנו</string>
+    <string name="regulations_title">תקנון</string>
+    <string name="returns_policy_title">מדיניות ביטולים</string>
+    <string name="privacy_policy_title">מדיניות פרטיות</string>
+    <string name="contact_shop_phone_label">טלפון: %1$s</string>
+    <string name="contact_shop_extra_phone_label">טלפון נוסף: %1$s</string>
+    <string name="no_user_name">אורח</string>
+    <string name="dialog_exit_confirm_text">האם ברצונך לצאת?</string>
+    <string name="dialog_exit_confirm">צא</string>
+    <string name="dialog_exit_cancel">בטל</string>
+    <string name="unit_type_kg">ק\"ג</string>
+    <string name="unit_type_unit">יח\'</string>
+    <string name="error_no_network">אין חיבור לאינטרנט</string>
+    <string name="menu_about_shop">אודות </string>
+    <string name="dialog_product_comment_ok">שמור</string>
+    <string name="dialog_product_comment_cancel">בטל</string>
+    <string name="dialog_item_comment_ok">שמור</string>
+    <string name="dialog_item_comment_cancel">בטל</string>
+    <string name="item_comment_placeholder">הוסף הערה</string>
+    <string name="item_checkout_comment">הערה:</string>
+    <string name="login_sms_submit" translatable="false">התחבר</string>
+    <string name="toppings_header">%1$s \n  %2$s\nמס\' %3$d</string>
+    <string name="toppings_sum_label">סהכ להזמנה זו:</string>
+    <string name="toppings_additional_product_text">האם תרצה להזמין עוד יחידה\nממוצר זה?</string>
+    <string name="toppings_pizza_additional_product_text">האם תרצה להזמין עוד פיצה?</string>
+    <string name="toppings_additional_product_confirm_button">כן, בטח!</string>
+    <string name="toppings_additional_product_cancel_button">לא, תודה</string>
+    <string name="for_free">ללא עלות</string>
+    <string name="delivery_price">דמי משלוח %s</string>
+    <string name="min_price_for_order">מינימום להזמנה %s</string>
+    <string name="to_preorder">מעבר לקופה</string>
+    <string name="to_payment">מעבר לתשלום</string>
+    <string name="my_cart">הסל שלי</string>
+    <string name="coupe">קופה</string>
+    <string name="visit_us_with_address">מוזמנים לבקר אותנו בחנות בכתובת:\n%s</string>
+    <string name="order_with_number">הזמנה מספר %s</string>
+    <string name="dialog_order_received_title">יש!\n ההזמנה שלך במערכת</string>
+    <string name="order_received_text">נציג יצור איתך קשר בהקדם  כדי לאשר את ההזמנתך</string>
+    <string name="new_item">חדש!</string>
+    <string name="remove_from_cart">הסר מסל</string>
+    <string name="add_new_product_with_toppings">הוסף עוד פריט מסוג זה</string>
+    <string name="add_new_pizza_with_toppings">הוסף עוד פיצה</string>
+    <string name="add_to_cart">הוסף לסל</string>
+    <string name="with_toppings">כולל תוספות</string>
+    <string name="dialog_make_order_date_error">הזמנה לא נשלחה,\n נא לבחור שעה מעודכנת</string>
+    <string name="dialog_make_order_confirm">אישור</string>
+    <string name="dialog_coupon_text">הזן כאן את קוד הקופון שלך:</string>
+    <string name="dialog_coupon_error">קוד קופון לא תקין</string>
+    <string name="dont_have_coupon">אין לי קופון</string>
+    <string name="enable_coupon">הפעלת קופון</string>
+    <string name="coupon_confirmed">קופון על סך %s%% הנחה\n הוזן בהצלחה ויקוזז מההזמנה</string>
+    <string name="go_to_payment">המשך לתשלום</string>
+    <string name="have_coupon">יש לך קופון?\nלחץ כאן</string>
+    <string name="notification_subscribe_title">אנחנו אוהבים את הלקוחות שלנו,\n וחושבים שמגיעה להם הטוב ביותר!</string>
+    <string name="notification_text">בא לך לקבל עידכונים על  הטבות ומבצעים מיוחדים?  מבטיחים לא להציק יותר מידי…</string>
+    <string name="comment_hint">כתוב את ההערה שלך כאן</string>
+    <string name="no_history_orders">אין לך הזמנות</string>
+    <string name="start_adding_products_to_cart">התחל להוסיף מוצרים לסל</string>
+    <string name="shop_contact_text">לשינוי או ביטול, צרו איתנו קשר</string>
+    <string name="delivery_cost_dialog_title">שים לב!</string>
+    <string name="delivery_cost_dialog_text">עלות דמי המשלוח לכתובת שהזנת הינה</string>
+    <string name="next">המשך</string>
+    <string name="delivery_price_from_zones">דמי משלוח יתעדכנו לאחר הזנת הכתובת</string>
+    <string name="new_order">חדשה</string>
+    <string name="prepare_order">בהכנה</string>
+    <string name="order_ready">מוכנה</string>
+    <string name="order_payed">שולמה</string>
+    <string name="no_current_order">לא ניתן לעשות הזמנה לעכשיו</string>
+    <string name="reorder_to_order_start_page">התרחשה שגיאה, הינך מועבר לתחילת תהליך ההזמנה</string>
+    <string name="no_delivery_payment">לכתובת זו אין דמי משלוח</string>
+    <string name="credit_order_complete" translatable="false">כרטיס אשראי שלך יחוייב לאחר אריזת המוצרים ושקילתם</string>
+    <string name="map_fragment_title">יש להזיז את הסמן עד לכתובת הרצויה\nולאחר מכן ללחוץ על מיקום לשליח</string>
+    <string name="address">כתובת</string>
+    <string name="title_dialog_type_pizza">בחר את סוג הפיצה שבא לך</string>
+    <string name="disable_filters">בטל סינון</string>
+    <string name="no_results">לא נמצאו תוצאות…</string>
+    <string name="start_shopping">התחל קניה</string>
+    <string name="welcome_to_shop">היי! הגעת ל-\n%s</string>
+    <string name="max_slices_alert">כמות התספות המקסמלית למוצר הזה היא %d\n כרגע יש חריגה בכמות</string>
+    <string name="we_are_sorry">ממש מצטערים</string>
+    <string name="delivery_still_not_available_for_radius">"המשלוחים שלנו עדיין לא מגיעים   לאיזור שלך.  "</string>
+    <string name="can_choose_by_fourth">ניתן לבחור לפי רבעים בלחיצה על התמונה</string>
+    <string name="choose_pizza_type">בחר את סוג הפיצה שבא לך</string>
+    <string name="close">סגור</string>
+    <string name="yes_of_course">כן, בטח!</string>
+    <string name="no_thanks">לא תודה</string>
+    <string name="see_the_order">לצפייה בהזמנה</string>
+    <string name="thanks">תודה</string>
+    <string name="carholder_full_name">שם מלא של בעל הכרטיס</string>
+    <string name="cardholder_id">ת.ז של בעל הכרטיס</string>
+    <string name="card_number">מספר כרטיס</string>
+    <string name="card_expire_date">תוקף הכרטיס</string>
+    <string name="fill_cvv_for_resume">להמשך תשלום מלא את ספרות ה-CVV</string>
+    <string name="pay_with_other_card">אני רוצה לשלם בכרטיס אשראי אחר</string>
+    <string name="agree_with_terms">אני מאשר שקראתי את התקנון ואת מדיניות פרטיות ואני מסכים לתנאיו</string>
+    <string name="choose_all">סמן הכל</string>
+    <string name="cart_is_empty">הסל שלך ריק</string>
+    <string name="tap_on_cart_for_to_start">לחץ על הסל ובוא נתחיל</string>
+    <string name="date">תאריך</string>
+    <string name="order_price">סכום ההזמנה</string>
+    <string name="order_number">מספר הזמנה</string>
+    <string name="order_type">סוג הזמנה</string>
+    <string name="delivery">משלוח</string>
+    <string name="arrive_time">זמן הגעה</string>
+    <string name="order_status">סטטוס הזמנה</string>
+    <string name="deliveried">סופק</string>
+    <string name="network_title_text">מה תרצה להזמין היום?</string>
+    <string name="total_for_order">סה״כ לתשלום:</string>
+    <string name="total_price_will_be_counted_after_order">הסכום הסופי לתשלום יקבע לאחר הכנת ההזמנה</string>
+    <string name="take_away">איסוף עצמי</string>
+    <string name="save_details">שמור פרטים</string>
+    <string name="not_in_stock">אזל\nבמלאי!</string>
+    <string name="add_comment">להוספת הערה לחץ כאן</string>
+    <string name="sale">מבצע!</string>
+    <string name="toppings">תוספות</string>
+    <string name="day">יום</string>
+    <string name="got_your_order">יש!\nקיבלנו את ההזמנה שלך</string>
+    <string name="error">שגיאה</string>
+    <string name="contact">יצירת קשר</string>
+    <string name="my_orders">היסטוריית הזמנות</string>
+    <string name="comment">הוספת הערה</string>
+    <string name="comment_for_shipping">הוספת הערה לשליח</string>
+    <string name="hint_fillname">שם + שם משפחה</string>
+    <string name="hint_phone">טלפון נייד</string>
+    <string name="hint_email">אימייל</string>
+    <string name="adress_for_shipping">כתובת למשלוח</string>
+    <string name="street">רחוב</string>
+    <string name="hint_number_house">מס\' בית</string>
+    <string name="hint_entry_code">קוד כניסה</string>
+    <string name="hint_apartment_number">מס\' דירה</string>
+    <string name="hint_floor">קומה</string>
+    <string name="hint_city">עיר/ישוב</string>
+    <string name="now">עכשיו</string>
+    <string name="reglament">התקנון</string>
+    <string name="privacy_policy">מדיניות פרטיות</string>
+    <string name="french" translatable="false">fr</string>
+    <string name="hebrew" translatable="false">iw</string>
+    <string name="arabic" translatable="false">ar</string>
+    <string name="copy_order">העתק לסל</string>
+    <string name="meal_item_added_text">מעולה!\nנבחר מוצר %s מתוך %s\n עוברים למוצר %s</string>
+    <string name="meal_last_item_added_text">מעולה!\nנבחר מוצר %s מתוך %s\n עוברים לשלב הבא</string>
+    <string name="meal_added_to_cart_text">סיימנו!\nהאם תרצה להזמין עוד \"%s\"?</string>
+    <string name="remove_froma_cart">החלף מוצר</string>
+    <string name="info_braked">מידע\nנוסף</string>
+    <string name="info_braked_one_line">מידע נוסף</string>
+    <string name="what_to_do">מה תרצה לעשות?</string>
+    <string name="edit">עדכן</string>
+    <string name="order_one_more" translatable="false">הזמן עוד אחד</string>
+    <string name="thank_you_finish">סיימתי, תודה!</string>
+    <string name="yes_thank_you">כן, תודה!</string>
+    <string name="order_new_product">להזמין מוצר נוסף</string>
+    <string name="edit_existing_product">לעדכן מוצר נוכחי</string>
+    <string name="please_chose_what_to_do">אנא בחר\n מה ברצונך לעשות?</string>
+    <string name="oops">אופס...</string>
+    <string name="almost_arrived_to_minimum">כמעט הגעת למינימום \n הנדרש להזמנה \n\n עוד קצת ואנחנו שם!\n\n</string>
+    <string translatable="false" name="payments_number">מספר תשלומים</string>
+    <string translatable="false" name="server_error">שגיאת שרת</string>
+    <string name="from_to_mins">%d-%d דק׳</string>
+</resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="30dp"
+    android:weightSum="10"
+    android:layoutDirection="ltr">
+
+    <TextView
+        android:id="@+id/type_price"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:gravity="right|center_vertical"
+        android:lines="1"
+        android:textSize="8sp"
+        android:autoSizeMaxTextSize="22sp"
+        android:autoSizeMinTextSize="8sp"
+        android:autoSizeTextType="uniform"
+        android:layout_weight="3"
+        tools:text="ללא אלות">
+    </TextView>
+
+    <CheckBox
+        android:id="@+id/pizza_type"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="right|center_vertical"
+        android:layoutDirection="rtl"
+        android:lines="1"
+        android:textSize="8sp"
+        android:autoSizeMaxTextSize="22sp"
+        android:autoSizeMinTextSize="8sp"
+        android:autoSizeTextType="uniform"
+        android:paddingEnd="10dp"
+        android:layout_weight="7"
+        tools:text="frtuyjhrfgujhrftyujogtujhiogyujh">
+    </CheckBox>
+
+</LinearLayout>

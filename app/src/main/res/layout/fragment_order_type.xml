@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_pay"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    tools:ignore="HardcodedText,Autofill">
+
+    <il.co.superclick.widgets.MenuBar
+        android:id="@+id/menu_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_bar_height"
+        android:layout_alignParentTop="true" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/order_type_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/menu_bar"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/order_type_sum_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rect_border_accent_corners_16"
+            android:backgroundTint="@color/colorAccent"
+            android:elevation="2dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/order_type_sum_label"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:lines="1"
+                android:text="@string/total_for_order"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:autoSizeMaxTextSize="20dp"
+                app:autoSizeMinTextSize="16dp"
+                app:autoSizeTextType="uniform"
+                app:layout_constraintBottom_toBottomOf="@id/order_type_sum"
+                app:layout_constraintEnd_toStartOf="@id/order_type_sum"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/order_type_sum"
+                tools:textSize="16dp" />
+
+            <il.co.superclick.widgets.PriceView
+                android:id="@+id/order_type_sum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@id/order_type_sum_label"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="abc" />
+
+            <TextView
+                android:id="@+id/order_type_subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:lines="1"
+                android:text="wertwerterertyertytwerterteerteerterterttotal_price_will_be_counted_after_order"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:autoSizeMaxTextSize="16sp"
+                app:autoSizeMinTextSize="6sp"
+                app:autoSizeTextType="uniform"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/order_type_sum" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <EditText
+            android:id="@+id/order_type_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/rect_white_corners_8"
+            android:elevation="2dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:hint="@string/comment"
+            android:imeOptions="actionDone"
+            android:inputType="textMultiLine"
+            android:maxLength="400"
+            android:minLines="2"
+            android:maxLines="2"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:textSize="14sp"
+            android:autoSizeMaxTextSize="16sp"
+            android:autoSizeMinTextSize="14sp"
+            android:autoSizeTextType="uniform"
+            app:layout_constraintEnd_toEndOf="@id/order_type_sum_view"
+            app:layout_constraintStart_toStartOf="@id/order_type_sum_view"
+            app:layout_constraintTop_toBottomOf="@id/order_type_sum_view" />
+
+        <EditText
+            android:id="@+id/order_type_delivery_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rect_white_corners_8"
+            android:elevation="2dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:hint="@string/comment_for_shipping"
+            android:imeOptions="actionDone"
+            android:inputType="textMultiLine"
+            android:maxLength="400"
+            android:maxLines="2"
+            android:minLines="2"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/order_type_comment"
+            app:layout_constraintStart_toStartOf="@id/order_type_comment"
+            app:layout_constraintTop_toBottomOf="@id/order_type_comment" />
+
+        <TextView
+            android:id="@+id/order_type_date_picker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rect_white_corners_8"
+            android:elevation="2dp"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:text="@string/date"
+            app:layout_constraintEnd_toEndOf="@id/order_type_delivery_comment"
+            app:layout_constraintStart_toStartOf="@id/order_type_delivery_comment"
+            app:layout_constraintTop_toBottomOf="@id/order_type_delivery_comment" />
+
+        <ImageView
+            android:id="@+id/edit_image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/pencil"
+            android:elevation="2dp"
+            android:layout_marginEnd="14dp"
+            android:outlineProvider="none"
+            android:background="@color/transparent"
+            app:layout_constraintTop_toTopOf="@id/order_type_date_picker"
+            app:layout_constraintBottom_toBottomOf="@id/order_type_date_picker"
+            app:layout_constraintEnd_toEndOf="@+id/order_type_date_picker"
+            />
+
+        <il.co.superclick.order.DaysOfWeekPicker
+            android:id="@+id/order_type_time_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:elevation="2dp"
+            app:layout_constraintEnd_toEndOf="@id/order_type_comment"
+            app:layout_constraintStart_toStartOf="@id/order_type_comment"
+            app:layout_constraintTop_toBottomOf="@id/order_type_date_picker"
+            tools:layout_height="36dp" />
+
+<!--        <ImageView-->
+<!--            android:layout_width="24dp"-->
+<!--            android:layout_height="24dp"-->
+<!--            android:src="@drawable/pencil"-->
+<!--            app:layout_constraintTop_toTopOf="@id/order_type_time_picker"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/order_type_time_picker"-->
+<!--            app:layout_constraintEnd_toEndOf="@id/order_type_time_picker"-->
+<!--            />-->
+
+        <TextView
+            android:id="@+id/order_type_delivery_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/order_type_checkbox_label_unchecked"
+            android:gravity="center"
+            android:paddingStart="10dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="2dp"
+            android:text="@string/delivery"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="16sp"
+            android:autoSizeTextType="uniform"
+            android:translationX="12dp"
+            app:layout_constraintBottom_toBottomOf="@id/order_type_delivery"
+            app:layout_constraintStart_toEndOf="@id/order_type_delivery"
+            app:layout_constraintTop_toTopOf="@id/order_type_delivery"
+            tools:background="@drawable/order_type_checkbox_label"
+            tools:textColor="@color/white" />
+
+        <CheckBox
+            android:id="@+id/order_type_delivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="14dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:translationX="8dp"
+            app:layout_constraintStart_toStartOf="@id/order_type_time_picker"
+            app:layout_constraintTop_toBottomOf="@id/order_type_time_picker" />
+
+        <TextView
+            android:id="@+id/order_type_pickup_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/order_type_checkbox_label_unchecked"
+            android:gravity="center"
+            android:paddingStart="6dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="2dp"
+            android:layout_marginEnd="24dp"
+            android:text="@string/take_away"
+            android:textSize="12sp"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="16sp"
+            android:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="@id/order_type_pickup"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/order_type_pickup" />
+
+        <CheckBox
+            android:id="@+id/order_type_pickup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:translationX="-2dp"
+            app:layout_constraintBottom_toBottomOf="@id/order_type_delivery"
+            app:layout_constraintEnd_toStartOf="@id/order_type_pickup_label"
+            app:layout_constraintTop_toTopOf="@id/order_type_delivery" />
+
+        <Button
+            android:id="@+id/order_type_submit"
+            style="@style/Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/next"
+            android:paddingStart="35dp"
+            android:paddingEnd="35dp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/order_type_pickup" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/order_type_delivery_price_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/black_stroke_rounded_corns"
+        android:paddingStart="16dp"
+        android:paddingTop="2dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="2dp"
+        android:textSize="10sp"
+        android:autoSizeMaxTextSize="16sp"
+        android:autoSizeMinTextSize="10sp"
+        android:autoSizeTextType="uniform"
+        android:text="@string/delivery_price_from_zones"
+        tools:text="@string/delivery_price" />
+
+</RelativeLayout>

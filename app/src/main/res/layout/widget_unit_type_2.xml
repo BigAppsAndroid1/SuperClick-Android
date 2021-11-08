@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="ContentDescription"
+    tools:layoutDirection="rtl"
+    tools:layout_height="24dp"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <TextView
+        android:id="@+id/widget_unit_type_kg"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/unit_type_widget_2"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="@string/unit_type_kg"
+        android:textSize="14sp"
+        android:autoSizeMinTextSize="6sp"
+        android:autoSizeMaxTextSize="20sp"
+        android:autoSizeTextType="uniform"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/widget_unit_type_unit"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/widget_unit_type_unit"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/unit_type_widget_2"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="@string/unit_type_unit"
+        android:textSize="14sp"
+        android:autoSizeMinTextSize="6sp"
+        android:autoSizeMaxTextSize="20sp"
+        android:autoSizeTextType="uniform"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/widget_unit_type_kg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</merge>

@@ -1,0 +1,94 @@
+{
+  "id": 1,
+  "code": "1234",
+  "name": "test shop",
+  "image": "https://lh3.googleusercontent.com/yl7PM7lux6dflXes4ITkgt6Fi46qO9CzfeY9XeczJXsDb3FoSKPGClcWIMWsueTnp89gZx5aUkI3ug1V1ptMJ2ZHbxTkkYc4Hhf9neOH",
+  "description": "test description\nwall of text\n...",
+  "address": null,
+  "phone": "+1234567890",
+  "categories": [
+    {
+      "name": "category a",
+      "codename": "vegetables"
+    },
+    {
+      "name": "category b",
+      "codename": "fruits"
+    },
+    {
+      "name": "category c",
+      "codename": "grocery"
+    }
+  ],
+  "paymentTypes": [
+    "cash",
+    "credit"
+  ],
+  "orderTypes": [
+    "delivery",
+    "pickup"
+  ],
+  "workingTimes": {
+    "sunday": [
+      {
+        "id": 1,
+        "from": "10:00",
+        "to": "14:00"
+      }
+    ],
+    "monday": [
+      {
+        "id": 1,
+        "from": "10:00",
+        "to": "14:00"
+      },
+      {
+        "id": 2,
+        "from": "14:00",
+        "to": "18:00"
+      }
+    ],
+    "tuesday": [
+      {
+        "id": 1,
+        "from": "10:00",
+        "to": "14:00"
+      },
+      {
+        "id": 3,
+        "from": "18:00",
+        "to": "22:00"
+      }
+    ],
+    "wednesday": [
+      {
+        "id": 1,
+        "from": "10:00",
+        "to": "14:00"
+      }
+    ],
+    "thursday": [
+      {
+        "id": 1,
+        "from": "10:00",
+        "to": "14:00"
+      }
+    ],
+    "friday": [
+      {
+        "id": 1,
+        "from": "10:00",
+        "to": "14:00"
+      }
+    ],
+    "saturday": [
+      {
+        "id": 1,
+        "from": "10:00",
+        "to": "14:00"
+      }
+    ]
+  },
+  "deliveryTimes": null,
+  "pickupTimes": null
+}

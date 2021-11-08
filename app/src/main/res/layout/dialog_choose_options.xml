@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Dialog"
+    android:layoutDirection="ltr"
+    tools:layout_height="300dp">
+
+    <ImageView
+        android:id="@+id/dialog_pizza_type_close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:contentDescription="Close"
+        android:src="@drawable/close"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pizza_title_dialog"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:autoSizeMaxTextSize="24sp"
+        android:autoSizeMinTextSize="10sp"
+        android:autoSizeTextType="uniform"
+        android:contentDescription="Choose the type of pizza you like"
+        android:text="@string/title_dialog_type_pizza"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:paddingEnd="30dp"
+        android:paddingStart="30dp"
+        android:lines="2"
+        app:layout_constraintBottom_toTopOf="@id/list_types_pizza"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="@string/choose_pizza_type" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_types_pizza"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="List toppings"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/pizza_title_dialog"
+        app:layout_constraintStart_toStartOf="@+id/pizza_title_dialog"
+        app:layout_constraintTop_toBottomOf="@+id/pizza_title_dialog"
+        tools:listitem="@layout/item_pizza_type"
+        tools:itemCount="10"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

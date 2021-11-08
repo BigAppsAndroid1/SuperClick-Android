@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/view_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:fontFamily="@font/heebo_medium"
+        android:textSize="14sp"
+        tools:text="10.0" />
+
+    <TextView
+        android:id="@+id/view_price_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/view_price"
+        android:layout_alignBottom="@id/view_price"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="1dp"
+        android:layout_toEndOf="@id/view_price"
+        android:lines="1"
+        android:textSize="12dp"
+        tools:text="₪" />
+</RelativeLayout>

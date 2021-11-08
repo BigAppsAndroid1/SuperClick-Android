@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:background="@drawable/rect_gray_border_corners_8"
+    tools:ignore="ContentDescription,HardcodedText"
+    tools:layout_height="80dp"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <ImageView
+        android:id="@+id/widget_amount_add"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_weight="1"
+        android:padding="2dp"
+        android:src="@drawable/add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/widget_amount_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:lines="1"
+        android:src="@drawable/add"
+        android:text="0"
+        android:layout_marginBottom="6dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:autoSizeMaxTextSize="34sp"
+        app:autoSizeMinTextSize="10sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/widget_amount_remove"
+        app:layout_constraintStart_toEndOf="@id/widget_amount_add"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/widget_amount_remove"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:padding="2dp"
+        android:layout_weight="1"
+        android:src="@drawable/remove"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</merge>

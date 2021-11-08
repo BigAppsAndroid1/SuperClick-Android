@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "16877274999",
+    "project_id": "superclick-77e42",
+    "storage_bucket": "superclick-77e42.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:16877274999:android:70b662bf6d85cf290d0372",
+        "android_client_info": {
+          "package_name": "il.co.superclick"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "16877274999-i49a1m75kjglhhpk6dk6eeto67d782vs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCo_Y0td-Y3VijXh9hROPyaRlJG7Usihew"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "16877274999-i49a1m75kjglhhpk6dk6eeto67d782vs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

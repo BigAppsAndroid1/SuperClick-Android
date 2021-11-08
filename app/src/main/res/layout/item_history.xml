@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    tools:ignore="ContentDescription,HardcodedText">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/item_history_date_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="@string/date"
+                    android:textColor="@color/grey"
+                    android:textSize="14sp"
+                    app:autoSizeMaxTextSize="16sp"
+                    app:autoSizeMinTextSize="12sp"
+                    app:autoSizeTextType="uniform" />
+
+                <TextView
+                    android:id="@+id/item_history_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:autoSizeMaxTextSize="14sp"
+                    app:autoSizeMinTextSize="12sp"
+                    app:autoSizeTextType="uniform"
+                    tools:text="@tools:sample/date/ddmmyy" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/item_history_sum_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/order_price"
+                    android:textColor="@color/grey"
+                    android:textSize="14sp"
+                    app:autoSizeMaxTextSize="16sp"
+                    app:autoSizeMinTextSize="12sp"
+                    app:autoSizeTextType="uniform" />
+
+                <TextView
+                    android:id="@+id/item_history_sum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:autoSizeMaxTextSize="14sp"
+                    app:autoSizeMinTextSize="12sp"
+                    app:autoSizeTextType="uniform"
+                    tools:text="75.30" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/item_history_id_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/order_number"
+                    android:textColor="@color/grey"
+                    android:layout_marginTop="16dp"
+                    android:textSize="14sp"
+                    app:autoSizeMaxTextSize="16sp"
+                    app:autoSizeMinTextSize="12sp"
+                    app:autoSizeTextType="uniform" />
+
+                <TextView
+                    android:id="@+id/item_history_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="12sp"
+                    app:autoSizeTextType="uniform"
+                    tools:text="123" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/item_history_icon"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_margin="8dp"
+                android:src="@drawable/product_done"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+
+        <View
+            style="@style/Separator.Vertical"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layoutDirection="rtl"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/item_history_order_type_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="@string/order_type"
+                    android:textColor="@color/grey"
+                    android:textSize="14sp"
+                    app:autoSizeMaxTextSize="16sp"
+                    app:autoSizeMinTextSize="12sp"
+                    app:autoSizeTextType="uniform" />
+
+                <TextView
+                    android:id="@+id/item_history_order_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="12sp"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:text="@string/delivery" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/item_history_order_time_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="@string/arrive_time"
+                    android:textColor="@color/grey"
+                    android:textSize="14sp"
+                    app:autoSizeMaxTextSize="16sp"
+                    app:autoSizeMinTextSize="12sp"
+                    app:autoSizeTextType="uniform" />
+
+                <TextView
+                    android:id="@+id/item_history_order_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textDirection="ltr"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="12sp"
+                    app:autoSizeTextType="uniform"
+                    tools:text="10:00 - 14:00\n03.05.2020" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/item_history_order_status_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="@string/order_status"
+                    android:textColor="@color/grey"
+                    android:textSize="14sp"
+                    app:autoSizeMaxTextSize="16sp"
+                    app:autoSizeMinTextSize="12sp"
+                    app:autoSizeTextType="uniform" />
+
+                <TextView
+                    android:id="@+id/item_history_order_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="12sp"
+                    app:autoSizeTextType="uniform"
+                    tools:text="@string/deliveried" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/item_history_copy_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:background="@drawable/rect_border_accent_corners_16"
+                    android:gravity="center"
+                    android:text="@string/copy_order"
+                    android:textSize="12sp"
+                    android:visibility="gone"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

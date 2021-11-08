@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    style="@style/Dialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_height="300dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:autoSizeMinTextSize="24sp"
+        android:autoSizeMaxTextSize="26sp"
+        android:fontFamily="@font/heebo_light"
+        android:contentDescription="Please select What do you want to do?"
+        android:text="@string/please_chose_what_to_do"
+        android:padding="10dp"
+        />
+
+    <TextView
+        android:id="@+id/dialog_meal_new_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Order another product"
+        android:text="@string/order_new_product"
+        android:fontFamily="@font/heebo_light"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:layout_marginBottom="30dp"
+        style="@style/Button.BlueWithBlueText"
+    />
+
+    <TextView
+        android:id="@+id/dialog_meal_edit_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Update current product"
+        android:text="@string/edit_existing_product"
+        android:fontFamily="@font/heebo_light"
+        android:layout_marginBottom="50dp"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        style="@style/Button.GrayWithGrayText"
+        />
+</LinearLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Dialog"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/dialog_product_alert_close"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:scaleX="0.7"
+        android:scaleY="0.7"
+        android:src="@drawable/close"
+        android:contentDescription="Close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dialog_min_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:contentDescription="Oops"
+        android:text="@string/oops"
+        android:textColor="@color/colorAccent"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialog_product_alert_close"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/dialog_min_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:contentDescription="You have almost reached the minimum required for an order a little more and we are there!"
+        android:text="@string/almost_arrived_to_minimum"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        android:breakStrategy="high_quality"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialog_min_title"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/dialog_minimum_for_order_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:background="@drawable/rect_gray_border_corners_8"
+        android:gravity="center"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/greyLight"
+        android:textSize="14sp"
+        android:contentDescription="Minimum order"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_min_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="מינימום להזמנה 25$" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

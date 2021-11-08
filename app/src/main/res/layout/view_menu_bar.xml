@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    tools:background="@color/dim"
+    tools:ignore="ContentDescription,Autofill,LabelFor,TextFields,Smalldp"
+    tools:layoutDirection="rtl"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="8dp"
+        >
+        <ImageView
+            android:id="@+id/menu_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/menu"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginStart="8dp"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/menu_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/search"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="6"
+        android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/menu_bar_cart_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:padding="4dp"
+        android:layout_gravity="left"
+        android:background="@drawable/cart_button">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/menu_bar_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:gravity="center"
+                android:text="@string/checkout_bar_label"
+                android:textColor="@color/white"
+                android:textSize="7sp" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/menu_bar_sum"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="start|center_vertical"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="10sp"
+            tools:text="0.00" />
+        <TextView
+            android:id="@+id/menu_bar_cart_badge"
+            android:layout_width="16dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/menu_bar_cart_badge"
+            android:backgroundTint="@color/colorPrimary"
+            android:elevation="8dp"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:translationX="5dp"
+            android:visibility="gone"
+            android:translationY="3dp"
+            tools:visibility="visible"
+            tools:ignore="HardcodedText" />
+        <ImageView
+            android:id="@+id/menu_bar_cart_image"
+            android:layout_width="25dp"
+            android:paddingEnd="5dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="5dp"
+            android:elevation="2dp"
+            android:src="@drawable/shop_cart"
+             />
+
+
+
+    </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/menu_back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:scaleX="0.4"
+            android:scaleY="0.4"
+            android:src="@drawable/back"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toEndOf="@id/menu_guide_08"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white"
+            tools:visibility="visible" />
+         </LinearLayout>
+
+    </LinearLayout>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/menu_guide_02"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.17" />
+
+    <EditText
+        android:id="@+id/menu_search_edit"
+        style="@style/EditText.White"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="2dp"
+        android:imeOptions="actionDone"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/menu_guide_08"
+        app:layout_constraintStart_toEndOf="@id/menu_guide_02"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="search value"
+        tools:visibility="gone" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/menu_guide_08"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.88" />
+
+
+
+    <TextView
+        android:id="@+id/fragment_title"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:textSize="16dp"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="12dp"
+        android:autoSizeMaxTextSize="16dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        tools:text="מדיניות ביטולים"/>
+</merge>

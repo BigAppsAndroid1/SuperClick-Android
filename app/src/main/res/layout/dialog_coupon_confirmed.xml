@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Dialog"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/dialog_order_received_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="6dp"
+        android:contentDescription="@null"
+        android:src="@drawable/image_happy"
+        app:layout_constraintDimensionRatio="3:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/coupon_confirmed_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:contentDescription="Coupon for% s %% discount Only entered and deducted from order"
+        android:text="@string/coupon_confirmed"
+        android:textColor="#7f000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/coupon_confirmed_to_payment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialog_order_received_image"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/coupon_confirmed_to_payment"
+        style="@style/Button.GrayWithGrayText"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="16dp"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:contentDescription="Continue to pay"
+        android:text="@string/go_to_payment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/coupon_confirmed_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

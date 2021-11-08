@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="ContentDescription"
+    tools:layoutDirection="rtl"
+    tools:layout_height="100dp"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/item_guide_05"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.54" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/item_guide_05_vert"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/item_guide_07"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/item_guide_09"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.94" />
+
+    <ImageView
+        android:id="@+id/item_checkout_image"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="H,1:1.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/item_checkout_name"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="0dp"
+        android:gravity="start|bottom"
+        android:maxLines="4"
+        android:textAlignment="viewStart"
+        android:textColor="@color/colorPrimary"
+        android:textDirection="rtl"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:autoSizeMaxTextSize="16dp"
+        app:autoSizeMinTextSize="10dp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@id/item_guide_05_vert"
+        app:layout_constraintEnd_toStartOf="@id/item_guide_05"
+        app:layout_constraintStart_toEndOf="@id/item_checkout_image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1"
+        tools:text="@tools:sample/lorem" />
+
+    <TextView
+        android:id="@+id/item_checkout_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:lines="1"
+        android:textSize="12dp"
+        android:translationY="-4dp"
+        app:autoSizeMaxTextSize="12dp"
+        app:autoSizeMinTextSize="10dp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/item_checkout_name"
+        app:layout_constraintStart_toStartOf="@id/item_checkout_name"
+        app:layout_constraintTop_toBottomOf="@id/item_guide_05_vert"
+        app:layout_constraintVertical_bias="0"
+        tools:text="10.0\u20AA kg"
+        tools:textDirection="rtl" />
+
+    <TextView
+        android:id="@+id/item_checkout_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:layout_marginEnd="20dp"
+        app:autoSizeMaxTextSize="16dp"
+        app:autoSizeMinTextSize="14dp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/item_guide_07"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toEndOf="@id/item_guide_05"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="12.0" />
+
+    <TextView
+        android:id="@+id/item_checkout_unit_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="14dp"
+        app:autoSizeMaxTextSize="14dp"
+        app:autoSizeMinTextSize="10dp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBaseline_toBaselineOf="@id/item_history_amount"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/item_guide_07"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@id/item_checkout_amount"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="ק״ג" />
+
+    <il.co.superclick.widgets.PriceView
+        android:id="@+id/item_checkout_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/item_guide_09"
+        app:layout_constraintStart_toEndOf="@id/item_guide_07"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/item_checkout_comment_button"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:textStyle="bold"
+        android:text="@string/item_product_done_submit"
+        android:textSize="12dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:maxWidth="120dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/item_checkout_price"
+        app:layout_constraintTop_toBottomOf="@id/item_checkout_price"
+        tools:visibility="visible"/>
+
+
+</merge>

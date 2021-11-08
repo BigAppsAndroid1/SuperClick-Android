@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:layoutDirection="rtl"
+    tools:layout_height="wrap_content"
+    tools:parentTag="android.widget.FrameLayout">
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/days_of_week_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start|center_vertical"
+        android:lines="1"
+        android:textAlignment="viewStart"
+        tools:prompt="@string/days_of_week_pickup_prompt"
+        tools:text="@string/days_of_week_pickup_prompt" />
+</merge>

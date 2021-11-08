@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_credit"
+    android:layoutDirection="rtl"
+    tools:context=".MainActivity"
+    tools:ignore="HardcodedText,Autofill,LabelFor,TextFields, UnusedAttribute">
+
+    <il.co.superclick.widgets.MenuBar
+        android:id="@+id/menu_bar"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/menu_bar_height"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/credit_card_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="
+        credit_card_name_label,
+        credit_card_name,
+        credit_card_holder_id_label,
+        credit_card_holder_id,
+        credit_card_number_label,
+        credit_card_number,
+        credit_card_expire_label,
+        credit_card_expire_month,
+        credit_card_expire_year,
+        credit_card_cvv_label,
+        credit_card_cvv"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/credit_card_name_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:autoSizeMaxTextSize="24sp"
+        android:autoSizeMinTextSize="10sp"
+        android:autoSizeTextType="uniform"
+        android:text="@string/carholder_full_name"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/menu_bar" />
+
+    <EditText
+        android:id="@+id/credit_card_name"
+        style="@style/EditText.CreditCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:elevation="10dp"
+        android:imeOptions="actionNext"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:maxLength="40"
+        android:textSize="22dp"
+        app:layout_constraintEnd_toEndOf="@id/credit_card_name_label"
+        app:layout_constraintStart_toStartOf="@id/credit_card_name_label"
+        app:layout_constraintTop_toBottomOf="@id/credit_card_name_label" />
+
+    <TextView
+        android:id="@+id/credit_card_holder_id_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:autoSizeMaxTextSize="24sp"
+        android:autoSizeMinTextSize="10sp"
+        android:autoSizeTextType="uniform"
+        android:text="@string/cardholder_id"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/credit_card_name" />
+
+    <EditText
+        android:id="@+id/credit_card_holder_id"
+        style="@style/EditText.CreditCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:elevation="10dp"
+        android:imeOptions="actionNext"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:maxLength="12"
+        android:textSize="22dp"
+        app:layout_constraintEnd_toEndOf="@id/credit_card_holder_id_label"
+        app:layout_constraintStart_toStartOf="@id/credit_card_holder_id_label"
+        app:layout_constraintTop_toBottomOf="@id/credit_card_holder_id_label" />
+
+    <TextView
+        android:id="@+id/credit_card_number_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:autoSizeMaxTextSize="24sp"
+        android:autoSizeMinTextSize="10sp"
+        android:autoSizeTextType="uniform"
+        android:text="@string/card_number"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/credit_card_holder_id" />
+
+    <EditText
+        android:id="@+id/credit_card_number"
+        style="@style/EditText.CreditCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:elevation="10dp"
+        android:imeOptions="actionNext"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:maxLength="16"
+        android:textSize="22dp"
+        app:layout_constraintEnd_toEndOf="@id/credit_card_number_label"
+        app:layout_constraintStart_toStartOf="@id/credit_card_number_label"
+        app:layout_constraintTop_toBottomOf="@id/credit_card_number_label" />
+
+    <TextView
+        android:id="@+id/credit_card_expire_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:autoSizeMaxTextSize="24sp"
+        android:autoSizeMinTextSize="10sp"
+        android:autoSizeTextType="uniform"
+        android:gravity="right"
+        android:text="@string/card_expire_date"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/credit_card_number" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/credit_card_expire_month"
+        app:layout_constraintEnd_toEndOf="@id/credit_card_expire_month"
+        app:layout_constraintStart_toStartOf="@id/credit_card_expire_month"
+        app:layout_constraintTop_toTopOf="@id/credit_card_expire_month" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/credit_card_expire_month"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:elevation="10dp"
+        android:entries="@array/months"
+        android:prompt="@string/credit_card_month_prompt"
+        app:layout_constraintBottom_toBottomOf="@id/credit_card_cvv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/credit_card_cvv"
+        app:layout_constraintWidth_percent="0.28" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/credit_card_expire_year"
+        app:layout_constraintEnd_toEndOf="@id/credit_card_expire_year"
+        app:layout_constraintStart_toStartOf="@id/credit_card_expire_year"
+        app:layout_constraintTop_toTopOf="@id/credit_card_expire_year" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/credit_card_expire_year"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeMaxTextSize="24dp"
+        android:autoSizeMinTextSize="10dp"
+        android:autoSizeTextType="uniform"
+        android:elevation="10dp"
+        android:prompt="@string/credit_card_year_prompt"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@id/credit_card_cvv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/credit_card_cvv"
+        app:layout_constraintWidth_percent="0.28" />
+
+    <TextView
+        android:id="@+id/credit_card_cvv_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:autoSizeMaxTextSize="24sp"
+        android:autoSizeMinTextSize="10sp"
+        android:autoSizeTextType="uniform"
+        android:text="CVV"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintTop_toBottomOf="@id/credit_card_number" />
+
+    <EditText
+        android:id="@+id/credit_card_cvv"
+        style="@style/EditText.CreditCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="24dp"
+        android:elevation="10dp"
+        android:imeOptions="actionDone"
+        android:inputType="number"
+        android:maxLength="4"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/credit_card_cvv_label"
+        app:layout_constraintWidth_percent="0.28"
+        tools:ignore="SpUsage" />
+
+    <TextView
+        android:id="@+id/payments_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/payments_number"
+        app:layout_constraintBottom_toTopOf="@id/credit_card_payments_number"
+        app:layout_constraintEnd_toEndOf="@id/credit_card_payments_number"
+        app:layout_constraintStart_toStartOf="@id/credit_card_payments_number"
+        app:layout_constraintTop_toBottomOf="@id/credit_card_expire_month" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/credit_card_payments_number"
+        app:layout_constraintEnd_toEndOf="@id/credit_card_payments_number"
+        app:layout_constraintStart_toStartOf="@id/credit_card_payments_number"
+        app:layout_constraintTop_toTopOf="@id/credit_card_payments_number" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/credit_card_payments_number"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="2dp"
+        android:elevation="10dp"
+        android:prompt="@string/credit_card_month_prompt"
+        app:layout_constraintDimensionRatio="7:3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/payments_label"
+        app:layout_constraintWidth_percent="0.28"
+        tools:listitem="@layout/payment_item" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/credit_card_token"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="
+        credit_card_token_label,
+        credit_card_token_number_label,
+        credit_card_token_number,
+        credit_card_token_cvv_label,
+        credit_card_token_cvv,
+        credit_card_new_card_button" />
+
+    <TextView
+        android:id="@+id/credit_card_token_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:text="@string/fill_cvv_for_resume"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/credit_card_holder_id" />
+
+    <TextView
+        android:id="@+id/credit_card_token_number_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/card_number"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/credit_card_token_label" />
+
+    <TextView
+        android:id="@+id/credit_card_token_number"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/rect_grey_corners_2"
+        android:gravity="center"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@id/credit_card_token_number_label"
+        app:layout_constraintStart_toStartOf="@id/credit_card_token_number_label"
+        app:layout_constraintTop_toBottomOf="@id/credit_card_token_number_label" />
+
+    <TextView
+        android:id="@+id/credit_card_token_cvv_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="CVV"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="@id/credit_card_token_number"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="@id/credit_card_token_number"
+        app:layout_constraintTop_toBottomOf="@id/credit_card_token_number" />
+
+    <EditText
+        android:id="@+id/credit_card_token_cvv"
+        style="@style/EditText.CreditCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:gravity="center"
+        android:imeOptions="actionDone"
+        android:inputType="number"
+        android:maxLength="4"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@id/credit_card_token_cvv_label"
+        app:layout_constraintStart_toStartOf="@id/credit_card_token_cvv_label"
+        app:layout_constraintTop_toBottomOf="@id/credit_card_token_cvv_label"
+        app:layout_constraintWidth_percent="0.28" />
+
+    <TextView
+        android:id="@+id/credit_card_submit"
+        style="@style/Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="25dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="25dp"
+        android:paddingBottom="5dp"
+        android:text="@string/credit_card_token_submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <TextView
+        android:id="@+id/credit_card_new_card_button"
+        style="@style/Button.White"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/button_grey"
+        android:gravity="center"
+        android:lines="1"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="@string/pay_with_other_card"
+        android:textColor="@color/grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

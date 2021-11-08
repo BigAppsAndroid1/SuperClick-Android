@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Dialog"
+    android:layoutDirection="ltr"
+    android:paddingStart="32dp"
+    android:paddingTop="16dp"
+    android:paddingEnd="32dp"
+    android:paddingBottom="16dp">
+
+    <TextView
+        android:id="@+id/pizza_title_dialog"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="30dp"
+        android:autoSizeMaxTextSize="22sp"
+        android:autoSizeMinTextSize="7sp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:lines="3"
+        android:contentDescription="You can select by quarters by clicking on the image"
+        android:text="@string/can_choose_by_fourth"
+        android:textColor="@color/colorAccent"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/iv_base_pizza"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/iv_base_pizza"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/pizza"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/chb_slice3"
+        app:layout_constraintStart_toStartOf="@+id/chb_slice1"
+        app:layout_constraintTop_toTopOf="@+id/chb_slice1"
+        app:layout_constraintWidth_percent="0.97" />
+
+    <CheckBox
+        android:id="@+id/chb_slice3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="Topping to slice of pizza number three"
+        android:button="@drawable/pizza_hide"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/chb_slice1"
+        app:layout_constraintStart_toEndOf="@id/chb_slice1"
+        app:layout_constraintTop_toTopOf="@+id/chb_slice1"
+        app:layout_constraintWidth_percent="0.50" />
+
+    <CheckBox
+        android:id="@+id/chb_slice4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="Topping to slice of pizza number four"
+        android:button="@drawable/pizza_hide"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/chb_slice3"
+        app:layout_constraintStart_toStartOf="@+id/chb_slice3"
+        app:layout_constraintTop_toBottomOf="@+id/chb_slice3"
+        app:layout_constraintWidth_percent="0.50" />
+
+    <CheckBox
+        android:id="@+id/chb_slice1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="Topping to slice of pizza number one"
+        android:button="@drawable/pizza_hide"
+        app:layout_constraintBottom_toTopOf="@+id/chb_slice2"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/chb_slice3"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintWidth_percent="0.50" />
+
+    <CheckBox
+        android:id="@+id/chb_slice2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:button="@drawable/pizza_hide"
+        android:contentDescription="Topping to slice of pizza number two"
+        app:layout_constraintBottom_toTopOf="@+id/dialog_confirm_button"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/chb_slice3"
+        app:layout_constraintStart_toStartOf="@+id/chb_slice1"
+        app:layout_constraintTop_toBottomOf="@+id/chb_slice1"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintWidth_percent="0.50" />
+
+    <ImageView
+        android:id="@+id/iv_base_pizza2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="false"
+        android:scaleX="1.1"
+        android:scaleY="1.1"
+        android:src="@drawable/choice"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/chb_slice3"
+
+        app:layout_constraintStart_toStartOf="@+id/chb_slice1"
+        app:layout_constraintTop_toTopOf="@+id/chb_slice1"
+        app:layout_constraintWidth_percent="0.98" />
+
+    <CheckBox
+        android:id="@+id/btn_choose_all_pizza"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:button="@drawable/pizza_hide"
+        android:contentDescription="Topping to all pizza"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_base_pizza"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/iv_base_pizza"
+        app:layout_constraintStart_toStartOf="@+id/iv_base_pizza"
+        app:layout_constraintTop_toTopOf="@+id/iv_base_pizza"
+        app:layout_constraintWidth_percent="0.1" />
+
+    <TextView
+        android:id="@+id/dialog_confirm_button"
+        style="@style/Button.BlueWithBlueText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Confirmation"
+        android:text="@string/dialog_confirm_ok"
+        android:textSize="16sp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/dialog_confirm_cancel"
+        app:layout_constraintEnd_toStartOf="@id/dialog_confirm_cancel"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/dialog_confirm_cancel"
+        app:layout_goneMarginStart="0dp" />
+
+    <TextView
+        android:id="@+id/dialog_confirm_cancel"
+        style="@style/Button.GrayWithBlueText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:contentDescription="Cancelation"
+        android:text="@string/dialog_confirm_cancel"
+        android:textSize="16sp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@id/dialog_confirm_button"
+        app:layout_constraintTop_toBottomOf="@+id/iv_base_pizza"
+        app:layout_goneMarginEnd="0dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

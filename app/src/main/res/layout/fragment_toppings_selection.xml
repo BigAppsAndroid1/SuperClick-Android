@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Dialog"
+    android:paddingStart="16dp"
+    android:paddingTop="16dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="16dp"
+    tools:ignore="ContentDescription">
+
+    <TextView
+        android:id="@+id/toppings_title"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:autoSizeMaxTextSize="22dp"
+        android:autoSizeMinTextSize="16dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:lines="3"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintDimensionRatio="500:130"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="פיצה יוונית אישית מס' 1\nתוספות" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/toppings_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="70dp"
+        android:scrollbars="vertical"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarFadeDuration="0"
+        android:fadeScrollbars="false"
+        android:maxHeight="200dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/toppings_submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toppings_title"
+        tools:layout_height="200dp"
+        tools:listitem="@layout/item_topping" />
+    <TextView
+        android:id="@+id/toppings_submit"
+        style="@style/Button"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="@string/add_to_cart"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toppings_list"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/toppings_delete"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/trash"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/toppings_close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

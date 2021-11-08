@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    android:background="@drawable/bg_1"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <il.co.superclick.widgets.MenuBar
+        android:id="@+id/menu_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_bar_height"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/checkout_title"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/coupe"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/menu_bar" />
+
+    <FrameLayout
+        android:id="@+id/checkout_frame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkout_title"
+        tools:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cart_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/cart_scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toTopOf="@id/checkout_order_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/checkout_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+            </androidx.core.widget.NestedScrollView>
+
+            <TextView
+                android:id="@+id/checkout_order_button"
+                android:layout_width="130dp"
+                android:layout_height="38dp"
+                android:background="@drawable/cart_order_button"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="2dp"
+                android:gravity="center"
+                android:layout_marginBottom="26dp"
+                android:text="@string/to_payment"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/checkout_coupon_button"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/checkout_delivery_price"
+                app:layout_constraintTop_toBottomOf="@id/cart_scroll_view" />
+
+            <TextView
+                android:id="@+id/checkout_coupon_button"
+                android:layout_width="130dp"
+                android:layout_height="0dp"
+                android:background="@drawable/cart_order_button"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="2dp"
+                android:gravity="center"
+                android:text="@string/have_coupon"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/checkout_order_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/checkout_order_button"
+                app:layout_constraintTop_toTopOf="@id/checkout_order_button"/>
+
+            <TextView
+                android:id="@+id/checkout_delivery_price"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_sides_border_rounded"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="@color/white"
+                android:text="@string/delivery_price_from_zones"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="@string/delivery_price" />
+
+            <il.co.superclick.widgets.SpinnerWidget
+                android:id="@+id/checkout_widget_spinner_list"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:visibility="visible"
+                android:translationY="200dp"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

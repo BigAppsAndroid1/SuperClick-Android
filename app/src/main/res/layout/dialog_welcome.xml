@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Dialog"
+    tools:layout_height="700dp">
+
+    <ImageView
+        android:id="@+id/dialog_welcome_close"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleX="0.7"
+        android:scaleY="0.7"
+        android:src="@drawable/close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dialog_welcome_top_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/heebo_light"
+        android:gravity="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/dialog_welcome_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialog_welcome_close"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="@string/welcome_to_shop" />
+
+    <ImageView
+        android:id="@+id/dialog_welcome_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@id/dialog_welcome_address"
+        app:layout_constraintDimensionRatio="2:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialog_welcome_top_text"
+        tools:src="@drawable/splash_image" />
+
+    <TextView
+        android:id="@+id/dialog_welcome_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:autoSizeMaxTextSize="28sp"
+        android:autoSizeMinTextSize="14sp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/heebo_light"
+        android:gravity="center"
+        android:lines="2"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/dialog_welcome_confirm_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialog_welcome_image"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="רחובות" />
+
+    <ImageView
+        android:id="@+id/welcome_shop_indicator"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/indicator_green"
+        app:layout_constraintDimensionRatio="1:1"
+        android:layout_marginStart="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.05"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_welcome_address"
+        />
+
+    <TextView
+        android:id="@+id/welcome_delivery_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp"
+        android:autoSizeMaxTextSize="28sp"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/heebo_light"
+        android:gravity="center"
+        android:lines="1"
+        android:textSize="13dp"
+        app:layout_constraintHorizontal_bias="0.58"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_shop_indicator"
+        tools:text="9:00-17:00 דק׳" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="12dp"
+        android:scaleX="1.6"
+        android:scaleY="1.6"
+        android:src="@drawable/clock_cycle"
+        app:layout_constraintBottom_toBottomOf="@+id/welcome_delivery_time"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/welcome_delivery_time"
+        app:layout_constraintTop_toTopOf="@+id/welcome_delivery_time" />
+
+    <TextView
+        android:id="@+id/dialog_welcome_confirm_button"
+        style="@style/Button.BlueWithBlueText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/heebo_light"
+        android:paddingStart="25dp"
+        android:paddingTop="3dp"
+        android:paddingEnd="25dp"
+        android:paddingBottom="3dp"
+        android:text="@string/start_shopping"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcome_delivery_time" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
